@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://js-nextjs.github.io/typescript/intro/">
+        <link rel="canonical" href="https://js-nextjs.github.io/typescript/type-only-imports-typescript/">
       
       
-        <link rel="prev" href="../../blog/">
+        <link rel="prev" href="../folder-structure/">
       
       
-        <link rel="next" href="../folder-structure/">
+        <link rel="next" href="../react-js-to-ts-migration-guide/">
       
       
       <link rel="icon" href="../../assets/logo/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Intro - TypeScript Organization</title>
+        <title>type only import - TypeScript Organization</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#intro" class="md-skip">
+        <a href="#understanding-type-only-imports-in-typescript" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro
+              type only import
             
           </span>
         </div>
@@ -266,7 +266,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../intro/" class="md-tabs__link">
           
   
   
@@ -484,19 +484,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
         
   
   
@@ -507,7 +498,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -540,10 +530,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../type-only-imports-typescript/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    type only import
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -554,6 +566,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-does-import-type-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      What does import type do?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#without-type-keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Without type keyword
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-is-it-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 So, is it required?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Best Practice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naming Convention
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Naming Convention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-filename-naming-convention-for-typescript-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 1. Filename Naming Convention (for TypeScript files)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-type-name-naming-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏷️ 2. Type Name Naming Convention
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -609,6 +728,101 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-does-import-type-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      What does import type do?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#without-type-keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Without type keyword
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-is-it-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 So, is it required?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Best Practice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naming Convention
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Naming Convention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-filename-naming-convention-for-typescript-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 1. Filename Naming Convention (for TypeScript files)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-type-name-naming-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏷️ 2. Type Name Naming Convention
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -623,7 +837,168 @@
 
 
 
-<h1 id="intro">Intro</h1>
+<h1 id="understanding-type-only-imports-in-typescript">Understanding Type-Only Imports in TypeScript</h1>
+<p>In TypeScript, the <code>type</code> keyword in an import like:</p>
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Message</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./message.types&quot;</span><span class="p">;</span>
+</span></code></pre></div>
+<p>is <strong>not required</strong>, but it is <mark>recommended</mark> in certain situations. Let's break it down:</p>
+<hr />
+<h2 id="what-does-import-type-do">What does <code>import type</code> do?</h2>
+<p><code>import type</code> tells TypeScript <mark>explicitly</mark> that you are <strong>only importing types</strong>, <mark>not runtime values</mark>.</p>
+<p>This has <strong>two main benefits</strong>:</p>
+<ol>
+<li>
+<p><strong>Tree-shaking and optimization</strong></p>
+<p>When you use <code>import type</code>, the imported type is <strong>completely erased</strong> from the JavaScript output during compilation, since types don't exist at runtime. This can improve <strong>tree-shaking</strong> and reduce bundle size.</p>
+</li>
+<li>
+<p><strong>Avoids circular dependencies and side effects</strong></p>
+<p>Since <code>import type</code> never brings in runtime code, it's safe from accidentally triggering side effects or circular imports.</p>
+</li>
+</ol>
+<hr />
+<h2 id="without-type-keyword">🔄 Without <code>type</code> keyword</h2>
+<p>If you do this:</p>
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Message</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./message.types&quot;</span><span class="p">;</span>
+</span></code></pre></div>
+<p>It still works fine <strong>as long as <code>Message</code> is a type</strong>, but now TypeScript <em>can't guarantee</em> that the import has no runtime effect. So:</p>
+<ul>
+<li>The compiler <mark>keeps the import</mark> in the compiled JavaScript (even though it's just a type).</li>
+<li>This can sometimes lead to unwanted side effects or circular dependencies.</li>
+</ul>
+<hr />
+<h2 id="so-is-it-required">🧠 So, is it required?</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th><code>import type</code> Required?</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TypeScript file (<code>.ts</code> or <code>.tsx</code>)</td>
+<td>❌ Not strictly required</td>
+<td>But recommended for type-only imports</td>
+</tr>
+<tr>
+<td>When using <code>isolatedModules</code> or Babel</td>
+<td>✅ Yes</td>
+<td>Because the compiler needs to know it's a type-only import for correct transpilation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="best-practice">✅ Best Practice</h2>
+<p>Use <code>import type</code> <strong>whenever you're importing types only</strong>. It's a good habit that improves code clarity and avoids potential pitfalls.</p>
+<hr />
+<h2 id="example">Example</h2>
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">export</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">Message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nx">authorId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nx">createdAt</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">};</span>
+</span></code></pre></div>
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// Good: Only imports type, won&#39;t be in compiled JS</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">import</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Message</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./message.types&quot;</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">export</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">ChatInput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nx">messages</span><span class="o">:</span><span class="w"> </span><span class="kt">Message</span><span class="p">[];</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nx">currentUserId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nx">readAt?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">};</span>
+</span></code></pre></div>
+<hr />
+<h2 id="naming-convention">Naming Convention</h2>
+<h3 id="1-filename-naming-convention-for-typescript-files">📄 1. Filename Naming Convention (for TypeScript files)</h3>
+<blockquote>
+<p>✅ Recommended:</p>
+</blockquote>
+<p>Use <strong>kebab-case</strong> (lowercase with hyphens) for filenames, which is common in many TypeScript projects.</p>
+<p><strong>Examples</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Filename</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type definitions for messages</td>
+<td><code>message.types.ts</code></td>
+</tr>
+<tr>
+<td>Type definitions for chat</td>
+<td><code>chat.types.ts</code></td>
+</tr>
+<tr>
+<td>Shared types</td>
+<td><code>shared.types.ts</code></td>
+</tr>
+<tr>
+<td>API request types</td>
+<td><code>api-request.types.ts</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Alternatives:</p>
+</blockquote>
+<ul>
+<li>Some teams use <strong>camelCase</strong> or <strong>PascalCase</strong>, but <code>kebab-case</code> is the most readable and conventional in open source and monorepo setups.</li>
+</ul>
+<hr />
+<h3 id="2-type-name-naming-convention">🏷️ 2. Type Name Naming Convention</h3>
+<blockquote>
+<p>✅ Recommended:</p>
+</blockquote>
+<p>Use <strong>PascalCase</strong> for all TypeScript type aliases and interfaces.</p>
+<ul>
+<li>This aligns with the naming of classes and types in general.</li>
+</ul>
+<blockquote>
+<p>Examples:</p>
+</blockquote>
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// ✅ PascalCase</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">export</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">ChatInput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">Message</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">export</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">UserId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</span></code></pre></div>
+<blockquote>
+<p>❌ Avoid:</p>
+</blockquote>
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// ❌ lowercase or snake_case</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">export</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">chat_input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">export</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">chatinput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">};</span>
+</span></code></pre></div>
+<h3 id="summary">Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Convention</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Filename</strong></td>
+<td><code>kebab-case</code></td>
+<td><code>chat-input.types.ts</code></td>
+</tr>
+<tr>
+<td><strong>Type name</strong></td>
+<td><code>PascalCase</code></td>
+<td><code>ChatInput</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
 
 
 
@@ -659,7 +1034,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../blog/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
+          <a href="../folder-structure/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Folder Structure">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -669,20 +1044,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Index
+                Folder Structure
               </div>
             </div>
           </a>
         
         
           
-          <a href="../folder-structure/" class="md-footer__link md-footer__link--next" aria-label="Next: Folder Structure">
+          <a href="../react-js-to-ts-migration-guide/" class="md-footer__link md-footer__link--next" aria-label="Next: React to TypeScript Migration">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Folder Structure
+                React to TypeScript Migration
               </div>
             </div>
             <div class="md-footer__button md-icon">

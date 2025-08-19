@@ -2,14 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://js-nextjs.github.io/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://js-nextjs.github.io/blog/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-08-19</lastmod>
+    </url>
+    <url>
+         <loc>https://js-nextjs.github.io/typescript/folder-structure/</loc>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://js-nextjs.github.io/typescript/intro/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-08-19</lastmod>
+    </url>
+    <url>
+         <loc>https://js-nextjs.github.io/typescript/react-js-to-ts-migration-guide/</loc>
+         <lastmod>2025-08-19</lastmod>
+    </url>
+    <url>
+         <loc>https://js-nextjs.github.io/typescript/type-only-imports-typescript/</loc>
+         <lastmod>2025-08-19</lastmod>
     </url>
 </urlset>
